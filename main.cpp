@@ -215,12 +215,12 @@ void otherCircle(GLfloat x, GLfloat y,GLfloat z, GLfloat radius,int r,int g,int 
 	int i;
 	int triangleAmount = 20; //# of triangles used to draw circle
 
-	//GLfloat radius = 0.8f; //radius
+	//radius
 	GLfloat twicePi = 2.0f * 3.1416;
     int counter=0;
     glColor3ub(r,g,b);
 	glBegin(GL_TRIANGLE_FAN);
-		glVertex3f(x, y,z); // center of circle
+		glVertex3f(x, y, z); // center of circle
 		for(i = 0; i <= triangleAmount;i++) {
 			counter+=1;
 			glVertex3f(
@@ -244,7 +244,7 @@ void car() //red car
         a+=0.2f;
         //glColor3ub(r,g,b);
     }
-    glColor3ub(255,0,0);
+    glColor3ub(205,112,84);
     glPushMatrix();
     glTranslatef(a,0,0);
     glBegin(GL_QUADS);
@@ -295,9 +295,9 @@ void car() //red car
     glEnd();
 
     //backbumper
-    otherCircle(30.0f,60.0f,0.0f,19.0f,255,0,0);
+    otherCircle(30.0f,60.0f,0.0f,19.0f,205,112,84);
     //front bumper
-    otherCircle(210.0f,60.0f,0.0f,19.0f,255,0,0);
+    otherCircle(210.0f,60.0f,0.0f,19.0f,205,112,84);
 
 //Light
     glColor3ub(250,250,0);
@@ -343,7 +343,7 @@ void car2() //blue car
         a+=0.2f;
         //glColor3ub(r,g,b);
     }
-    glColor3ub(0,0,255);
+    glColor3ub(135,206,250);
     glPushMatrix();
     glTranslatef(a,0,0);
     glBegin(GL_QUADS);
@@ -394,9 +394,9 @@ void car2() //blue car
     glEnd();
 
     //backbumper
-    otherCircle(30.0f,60.0f,0.0f,19.0f,0,0,255);
+    otherCircle(30.0f,60.0f,0.0f,19.0f,135,206,250);
     //front bumper
-    otherCircle(210.0f,60.0f,0.0f,19.0f,0,0,255);
+    otherCircle(210.0f,60.0f,0.0f,19.0f,135,206,250);
 
     //Light
     glColor3ub(250,250,0);
@@ -443,68 +443,115 @@ void truck()
         a-=0.2f;
         //glColor3ub(r,g,b);
     }
-    glColor3ub(0,0,255);
+    glColor3ub(119,136,153);
     //frontbumper
     glPushMatrix();
     glTranslatef(a,0,0);
-    otherCircle(780.0f,130.0f,0.0f,41.0f,255,255,0);
+
     //main body
     glBegin(GL_QUADS);
     glVertex3i(750,90,0);
-    glVertex3i(1000,90,0);
-    glVertex3i(1000,140,0);
-    glVertex3i(750,140,0);
+    glVertex3i(1100,90,0);
+    glVertex3i(1100,190,0);
+    glVertex3i(750,190,0);
     glEnd();
 
 
     glBegin(GL_QUADS);
-    glVertex3i(750,140,0);
-    glVertex3i(860,140,0);
+    glVertex3i(750,190,0);
+    glVertex3i(860,190,0);
     glVertex3i(860,160,0);
     glVertex3i(750,160,0);
     glEnd();
     //window
-    glBegin(GL_QUADS);
-    glVertex3i(750,160,0);
-    glVertex3i(860,160,0);
-    glVertex3i(860,190,0);
-    glVertex3i(800,190,0);
-    glEnd();
+
 
     glColor3ub(0,0,0);
     glBegin(GL_QUADS);
     glVertex3i(760,160,0);
-    glVertex3i(855,160,0);
-    glVertex3i(855,185,0);
+    glVertex3i(800,160,0);
     glVertex3i(800,185,0);
+    glVertex3i(760,185,0);
+    glEnd();
+
+    glColor3ub(0,0,0);
+    glBegin(GL_QUADS);
+    glVertex3i(805,160,0);
+    glVertex3i(825,160,0);
+    glVertex3i(825,185,0);
+    glVertex3i(805,185,0);
     glEnd();
 
     //handle
     glBegin(GL_QUADS);
-    glVertex3i(840,145,0);
-    glVertex3i(855,145,0);
-    glVertex3i(855,150,0);
-    glVertex3i(840,150,0);
+    glVertex3i(820,145,0);
+    glVertex3i(830,145,0);
+    glVertex3i(830,150,0);
+    glVertex3i(820,150,0);
+    glEnd();
+
+    //back windows
+
+    glColor3ub(0,0,0);
+    glBegin(GL_QUADS);
+    glVertex3i(850,160,0);
+    glVertex3i(885,160,0);
+    glVertex3i(885,185,0);
+    glVertex3i(850,185,0);
+    glEnd();
+
+    glColor3ub(0,0,0);
+    glBegin(GL_QUADS);
+    glVertex3i(890,160,0);
+    glVertex3i(930,160,0);
+    glVertex3i(930,185,0);
+    glVertex3i(890,185,0);
+    glEnd();
+
+    glColor3ub(0,0,0);
+    glBegin(GL_QUADS);
+    glVertex3i(935,160,0);
+    glVertex3i(975,160,0);
+    glVertex3i(975,185,0);
+    glVertex3i(935,185,0);
+    glEnd();
+
+    glColor3ub(0,0,0);
+    glBegin(GL_QUADS);
+    glVertex3i(980,160,0);
+    glVertex3i(1020,160,0);
+    glVertex3i(1020,185,0);
+    glVertex3i(980,185,0);
+    glEnd();
+
+    glColor3ub(0,0,0);
+    glBegin(GL_QUADS);
+    glVertex3i(1025,160,0);
+    glVertex3i(1085,160,0);
+    glVertex3i(1085,185,0);
+    glVertex3i(1025,185,0);
     glEnd();
 
 
 
 
-
-
-    //wheel
+    //wheel-1
     otherCircle(800.0f,90.0f,0.0f,21.0f,0,0,0);
     otherCircle(800.0f,90.0f,0.0f,15.0f,131,131,131);
-    otherCircle(950.0f,90.0f,0.0f,21.0f,0,0,0);
-    otherCircle(950.0f,90.0f,0.0f,15.0f,131,131,131);
+    //wheel-2
+    otherCircle(1000.0f,90.0f,0.0f,21.0f,0,0,0);
+    otherCircle(1000.0f,90.0f,0.0f,15.0f,131,131,131);
+    //wheel-3
+    otherCircle(1050.0f,90.0f,0.0f,21.0f,0,0,0);
+    otherCircle(1050.0f,90.0f,0.0f,15.0f,131,131,131);
 
     //backlight
     glColor3ub(255,0,0);
     glBegin(GL_QUADS);
-    glVertex3i(1000,110,0);
-    glVertex3i(1005,110,0);
-    glVertex3i(1005,120,0);
-    glVertex3i(1000,120,0);
+    glVertex3i(1100,110,0);
+    glVertex3i(1105,110,0);
+    glVertex3i(1105,120,0);
+    glVertex3i(1100,120,0);
     glEnd();
 
     //frontlignt
@@ -677,55 +724,7 @@ void rainf()
     glutPostRedisplay();
 
 }
-//LampStand
-void toplampPost(int x,int y,int z)
-{
-    otherCircle(x+60,y+3,0,5,222,250,50);
-    glColor3ub(222,250,50);
-    glBegin(GL_QUADS);
-    glVertex3i(x,y,z);
-    glVertex3i(x+70,y,z);
-    glVertex3i(x+70,y+5,z);
-    glVertex3i(x,y+5,z);
-    glEnd();
-}
-//Car
 
-void topCar()
-{
-    static float a=-400.0f;
-    if(a>=1324)
-    {
-         a=-500.0f;
-
-    }
-    else
-    {
-        a+=0.5f;
-        //glColor3ub(r,g,b);
-    }
-    glPushMatrix();
-    glTranslatef(a,0,0);
-    otherCircle(-100,18,0,23,255,0,0);
-    otherCircle(-130,18,0,23,255,0,0);
-    glColor3ub(255,0,0);
-    glBegin(GL_QUADS);
-    glVertex3i(-100,0,0);
-    glVertex3i(-135,0,0);
-    glVertex3i(-135,40,0);
-    glVertex3i(-100,40,0);
-    glEnd();
-    glColor3ub(0,0,0);
-    glBegin(GL_QUADS);
-    glVertex3i(-105,5,0);
-    glVertex3i(-90,10,0);
-    glVertex3i(-90,30,0);
-    glVertex3i(-105,35,0);
-    glEnd();
-
-    glPopMatrix();
-    glutPostRedisplay();
-}
 
 
 void nightMode()
@@ -776,13 +775,13 @@ void nightMode()
         //lamp post
         for(int i=9;i>=0;i--)
         {
-            lamp+=310;
+            lamp+=255;
             lampPost(lamp,130,0);
         }
         //light
         for(int i=9;i>=0;i--)
         {
-            light+=310;
+            light+=255;
             Light(light,130,0);
         }
         roadBorder();
@@ -841,7 +840,7 @@ void dayMode()
         //lamp post
         for(int i=9;i>=0;i--)
         {
-            lamp+=310;
+            lamp+=255;
             lampPost(lamp,130,0);
         }
         //light
@@ -861,6 +860,7 @@ void dayMode()
             rainf();
         }
 }
+
 
 
 
@@ -970,17 +970,9 @@ else if(key=='c')
 {
     carv=true;
 }
-else if(key=='v')
-{
-    carv=false;
-}
 else if(key=='p')
 {
     planev=true;
-}
-else if(key=='o')
-{
-    planev=false;
 }
 else if(key==13)
 {
