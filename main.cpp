@@ -178,17 +178,17 @@ void lampPost(int x,int y,int z)
     glColor3ub(220,220,220);
     glBegin(GL_QUADS);
     glVertex3i(x,y+93,z);
-    glVertex3i(x+70,y+93,z);
-    glVertex3i(x+70,y+100,z);
+    glVertex3i(x+40,y+93,z);
+    glVertex3i(x+40,y+100,z);
     glVertex3i(x,y+100,z);
     glEnd();
 
     //lightholder
     glColor3ub(220,220,220);
     glBegin(GL_TRIANGLES);
-    glVertex3i(x+50,y+85,z);
-    glVertex3i(x+70,y+85,z);
-    glVertex3i(x+60,y+93,z);
+    glVertex3i(x+20,y+85,z);
+    glVertex3i(x+40,y+85,z);
+    glVertex3i(x+30,y+93,z);
     glEnd();
 }
 //light
@@ -198,9 +198,9 @@ void Light(int x,int y,int z)
     glColor3ub(255,255,77);
     glBegin(GL_QUADS);
     glVertex3i(x+9,y,z);
-    glVertex3i(x+110,y,z);
-    glVertex3i(x+70,y+85,z);
-    glVertex3i(x+50,y+85,z);
+    glVertex3i(x+50,y,z);
+    glVertex3i(x+40,y+85,z);
+    glVertex3i(x+20,y+85,z);
     glEnd();
 
 }
@@ -231,7 +231,7 @@ void otherCircle(GLfloat x, GLfloat y,GLfloat z, GLfloat radius,int r,int g,int 
 	glEnd();
 }
 
-void car()
+void car() //red car
 {
     static float a=-400.0f;
     if(a>=1324)
@@ -330,7 +330,7 @@ void car()
 }
 
 
-void car2()
+void car2() //blue car
 {
     static float a=-1100.0f;
     if(a>=1324)
@@ -447,7 +447,7 @@ void truck()
     //frontbumper
     glPushMatrix();
     glTranslatef(a,0,0);
-    otherCircle(780.0f,130.0f,0.0f,41.0f,0,0,255);
+    otherCircle(780.0f,130.0f,0.0f,41.0f,255,255,0);
     //main body
     glBegin(GL_QUADS);
     glVertex3i(750,90,0);
@@ -487,42 +487,8 @@ void truck()
     glVertex3i(840,150,0);
     glEnd();
 
-    //gril
-    glColor3ub(0,0,0);
-    glBegin(GL_LINES);
-    glVertex3i(860,160,0);
-    glVertex3i(1000,160,0);
-    glVertex3i(860,159,0);
-    glVertex3i(1000,159,0);
-    glVertex3i(1000,160,0);
-    glVertex3i(1000,140,0);
-    glVertex3i(990,160,0);
-    glVertex3i(990,140,0);
-    glVertex3i(980,160,0);
-    glVertex3i(980,140,0);
-    glVertex3i(970,160,0);
-    glVertex3i(970,140,0);
-    glVertex3i(960,160,0);
-    glVertex3i(960,140,0);
-    glVertex3i(950,160,0);
-    glVertex3i(950,140,0);
-    glVertex3i(940,160,0);
-    glVertex3i(940,140,0);
-    glVertex3i(930,160,0);
-    glVertex3i(930,140,0);
-    glVertex3i(920,160,0);
-    glVertex3i(920,140,0);
-    glVertex3i(910,160,0);
-    glVertex3i(910,140,0);
-    glVertex3i(900,160,0);
-    glVertex3i(900,140,0);
-    glVertex3i(890,160,0);
-    glVertex3i(890,140,0);
-    glVertex3i(880,160,0);
-    glVertex3i(880,140,0);
-    glVertex3i(870,160,0);
-    glVertex3i(870,140,0);
-    glEnd();
+
+
 
 
 
@@ -647,80 +613,6 @@ void plane()
 
 }
 
-void planeTwo()
-{
-     static float a=550.0f;
-     static float b=0.0f;
-    if(a<=-1300)
-    {
-         a=550.0f;
-         b=0.0f;
-
-    }
-    else
-    {
-        a-=0.2f;
-        b-=0.02f;
-        //glColor3ub(r,g,b);
-    }
-
-
-    //Body
-    glColor3ub(128, 128, 128);
-    glPushMatrix();
-    glTranslatef(a,b,0);
-    glBegin(GL_QUADS);
-    glVertex3i(919,650,0);
-    glVertex3i(989,650,0);
-    glVertex3i(989,665,0);
-    glVertex3i(919,665,0);
-    glEnd();
-
-    //Front
-    glBegin(GL_TRIANGLES);
-    glVertex3i(919,650,0);
-    glVertex3i(909,657,0);
-    glVertex3i(919,665,0);
-    glEnd();
-
-    //FanBack
-    glBegin(GL_QUADS);
-    glVertex3i(987,665,0);
-    glVertex3i(1010,680,0);
-    glVertex3i(990,680,0);
-    glVertex3i(967,665,0);
-    glEnd();
-
-    //FanFrontUp
-    glBegin(GL_QUADS);
-    glVertex3i(949,665,0);
-    glVertex3i(959,665,0);
-    glVertex3i(979,685,0);
-    glVertex3i(969,685,0);
-    glEnd();
-
-    //FanFrontDown
-    glBegin(GL_QUADS);
-    glVertex3i(949,650,0);
-    glVertex3i(969,630,0);
-    glVertex3i(979,630,0);
-    glVertex3i(959,650,0);
-    glEnd();
-
-    int x=924;
-    //Window
-    glColor3ub(255,255,255);
-    glBegin(GL_POINTS);
-    for(int i=9;i>=0;i--)
-    {
-        glVertex3i(x,660,0);
-        x+=5;
-    }
-    glEnd();
-    glPopMatrix();
-    glutPostRedisplay();
-
-}
 
 //clouds
 void clouds(float x,float y,float z,int m,int l,int n)
@@ -869,7 +761,7 @@ void nightMode()
         if(planev)
         {
             plane();
-            planeTwo();
+
         }
         //cloud2
         clouds(450.0f,600.0f,0.0f,205, 205, 177);
@@ -935,7 +827,6 @@ void dayMode()
        if(planev)
         {
             plane();
-            planeTwo();
         }
         //cloud2
         clouds(450.0f,600.0f,0.0f,250,250,250);
