@@ -46,18 +46,18 @@ void *currentfont;
 
 void setFont(void *font)
 {
-	currentfont=font;
+    currentfont=font;
 }
 
 void drawstring(float x,float y,float z,char *string)
 {
-	char *c;
-	glRasterPos3f(x,y,z);
+    char *c;
+    glRasterPos3f(x,y,z);
 
-	for(c=string;*c!='\0';c++)
-	{
-		glutBitmapCharacter(currentfont,*c);
-	}
+    for(c=string; *c!='\0'; c++)
+    {
+        glutBitmapCharacter(currentfont,*c);
+    }
 }
 
 void Full(int r,int g,int b)
@@ -174,6 +174,42 @@ void buildings()
     glVertex3i(0,260,0);
     glEnd();
 
+    //building-1 line left
+    glColor3ub(95, 158, 160);
+    glBegin(GL_QUADS);
+    glVertex3i(0,400,0);
+    glVertex3i(5,400,0);
+    glVertex3i(5,260,0);
+    glVertex3i(0,260,0);
+    glEnd();
+
+    //building-1 line top
+    glColor3ub(95, 158, 160);
+    glBegin(GL_QUADS);
+    glVertex3i(0,400,0);
+    glVertex3i(80,400,0);
+    glVertex3i(80,395,0);
+    glVertex3i(0,395,0);
+    glEnd();
+
+    //building-1 line right
+    glColor3ub(95, 158, 160);
+    glBegin(GL_QUADS);
+    glVertex3i(75,400,0);
+    glVertex3i(80,400,0);
+    glVertex3i(80,260,0);
+    glVertex3i(75,260,0);
+    glEnd();
+
+    //building-1 line center
+    glColor3ub(95, 158, 160);
+    glBegin(GL_QUADS);
+    glVertex3i(38.5,400,0);
+    glVertex3i(42.5,400,0);
+    glVertex3i(42.5,260,0);
+    glVertex3i(38.5,260,0);
+    glEnd();
+
     //building-2
     glColor3ub(82, 122, 122);
     glBegin(GL_QUADS);
@@ -265,6 +301,53 @@ void buildings()
     glVertex3i(140,260,0);
     glEnd();
 
+    //building-6 left
+    glColor3ub(102, 205, 170);
+    glBegin(GL_QUADS);
+    glVertex3i(140,310,0);
+    glVertex3i(188,310,0);
+    glVertex3i(188,260,0);
+    glVertex3i(140,260,0);
+    glEnd();
+
+    //building-6 lineleft
+    glColor3ub(32, 178, 170);
+    glBegin(GL_QUADS);
+    glVertex3i(140,310,0);
+    glVertex3i(143,310,0);
+    glVertex3i(143,260,0);
+    glVertex3i(140,260,0);
+    glEnd();
+
+    //building-6 linetop
+    glColor3ub(32, 178, 170);
+    glBegin(GL_QUADS);
+    glVertex3i(140,310,0);
+    glVertex3i(300,310,0);
+    glVertex3i(300,307,0);
+    glVertex3i(140,307,0);
+    glEnd();
+
+    //building-6 lineright
+    glColor3ub(32, 178, 170);
+    glBegin(GL_QUADS);
+    glVertex3i(297,310,0);
+    glVertex3i(300,310,0);
+    glVertex3i(300,260,0);
+    glVertex3i(297,260,0);
+    glEnd();
+
+    //building-6 linecenter
+    glColor3ub(32, 178, 170);
+    glBegin(GL_QUADS);
+    glVertex3i(185,310,0);
+    glVertex3i(188,310,0);
+    glVertex3i(188,260,0);
+    glVertex3i(185,260,0);
+    glEnd();
+
+
+
     //building-7
     glColor3ub(163, 194, 194);
     glBegin(GL_QUADS);
@@ -283,21 +366,94 @@ void buildings()
     glVertex3i(365,260,0);
     glEnd();
 
-    //building-9
-    glColor3ub(71, 107, 107);
-    glBegin(GL_QUADS);
-    glVertex3i(395,370,0);
-    glVertex3i(615,370,0);
-    glVertex3i(615,260,0);
-    glVertex3i(395,260,0);
-    glEnd();
-
+    //building-10
     glColor3ub(82, 122, 122);
     glBegin(GL_QUADS);
     glVertex3i(385,360,0);
     glVertex3i(625,360,0);
     glVertex3i(625,260,0);
     glVertex3i(385,260,0);
+    glEnd();
+
+    //building-10 lines
+    glColor3ub(175, 238, 238);
+    glBegin(GL_QUADS);
+    glVertex3i(395,265,0);
+    glVertex3i(615,265,0);
+    glVertex3i(615,270,0);
+    glVertex3i(395,270,0);
+    glEnd();
+
+    //building-10 lines
+    glColor3ub(175, 238, 238);
+    glBegin(GL_QUADS);
+    glVertex3i(395,275,0);
+    glVertex3i(615,275,0);
+    glVertex3i(615,280,0);
+    glVertex3i(395,280,0);
+    glEnd();
+
+    //building-10 lines
+    glColor3ub(175, 238, 238);
+    glBegin(GL_QUADS);
+    glVertex3i(395,285,0);
+    glVertex3i(615,285,0);
+    glVertex3i(615,290,0);
+    glVertex3i(395,290,0);
+    glEnd();
+
+    //building-10 lines
+    glColor3ub(175, 238, 238);
+    glBegin(GL_QUADS);
+    glVertex3i(395,295,0);
+    glVertex3i(615,295,0);
+    glVertex3i(615,300,0);
+    glVertex3i(395,300,0);
+    glEnd();
+
+    //building-10 lines
+    glColor3ub(175, 238, 238);
+    glBegin(GL_QUADS);
+    glVertex3i(395,305,0);
+    glVertex3i(615,305,0);
+    glVertex3i(615,310,0);
+    glVertex3i(395,310,0);
+    glEnd();
+
+    //building-10 lines
+    glColor3ub(175, 238, 238);
+    glBegin(GL_QUADS);
+    glVertex3i(395,315,0);
+    glVertex3i(615,315,0);
+    glVertex3i(615,320,0);
+    glVertex3i(395,320,0);
+    glEnd();
+
+    //building-10 lines
+    glColor3ub(175, 238, 238);
+    glBegin(GL_QUADS);
+    glVertex3i(395,325,0);
+    glVertex3i(615,325,0);
+    glVertex3i(615,330,0);
+    glVertex3i(395,330,0);
+    glEnd();
+
+    //building-10 lines
+    glColor3ub(175, 238, 238);
+    glBegin(GL_QUADS);
+    glVertex3i(395,335,0);
+    glVertex3i(615,335,0);
+    glVertex3i(615,340,0);
+    glVertex3i(395,340,0);
+    glEnd();
+
+    //building-10 lines
+    glColor3ub(175, 238, 238);
+    glBegin(GL_QUADS);
+    glVertex3i(395,345,0);
+    glVertex3i(615,345,0);
+    glVertex3i(615,350,0);
+    glVertex3i(395,350,0);
     glEnd();
 
     //building-11
@@ -309,7 +465,160 @@ void buildings()
     glVertex3i(690,260,0);
     glEnd();
 
-    //building-10
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,265,0);
+    glVertex3i(770,265,0);
+    glVertex3i(770,270,0);
+    glVertex3i(700,270,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,275,0);
+    glVertex3i(770,275,0);
+    glVertex3i(770,280,0);
+    glVertex3i(700,280,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,285,0);
+    glVertex3i(770,285,0);
+    glVertex3i(770,290,0);
+    glVertex3i(700,290,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,295,0);
+    glVertex3i(770,295,0);
+    glVertex3i(770,300,0);
+    glVertex3i(700,300,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,305,0);
+    glVertex3i(770,305,0);
+    glVertex3i(770,310,0);
+    glVertex3i(700,310,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,315,0);
+    glVertex3i(770,315,0);
+    glVertex3i(770,320,0);
+    glVertex3i(700,320,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,325,0);
+    glVertex3i(770,325,0);
+    glVertex3i(770,330,0);
+    glVertex3i(700,330,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,335,0);
+    glVertex3i(770,335,0);
+    glVertex3i(770,340,0);
+    glVertex3i(700,340,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,345,0);
+    glVertex3i(770,345,0);
+    glVertex3i(770,350,0);
+    glVertex3i(700,350,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,355,0);
+    glVertex3i(770,355,0);
+    glVertex3i(770,360,0);
+    glVertex3i(700,360,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,365,0);
+    glVertex3i(770,365,0);
+    glVertex3i(770,370,0);
+    glVertex3i(700,370,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,375,0);
+    glVertex3i(770,375,0);
+    glVertex3i(770,380,0);
+    glVertex3i(700,380,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,385,0);
+    glVertex3i(770,385,0);
+    glVertex3i(770,390,0);
+    glVertex3i(700,390,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,395,0);
+    glVertex3i(770,395,0);
+    glVertex3i(770,400,0);
+    glVertex3i(700,400,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,405,0);
+    glVertex3i(770,405,0);
+    glVertex3i(770,410,0);
+    glVertex3i(700,410,0);
+    glEnd();
+
+    //building-11 lines
+    glColor3ub(25, 25, 112);
+    glBegin(GL_QUADS);
+    glVertex3i(700,415,0);
+    glVertex3i(770,415,0);
+    glVertex3i(770,420,0);
+    glVertex3i(700,420,0);
+    glEnd();
+
+    //buidling-11 middle line
+    glColor3ub(133, 133, 173);
+    glBegin(GL_QUADS);
+    glVertex3i(729,430,0);
+    glVertex3i(741,430,0);
+    glVertex3i(741,260,0);
+    glVertex3i(729,260,0);
+    glEnd();
+
+    //building-12
     glColor3ub(117, 117, 163);
     glBegin(GL_QUADS);
     glVertex3i(625,420,0);
@@ -318,27 +627,79 @@ void buildings()
     glVertex3i(625,260,0);
     glEnd();
 
-
-
-    //building-12
-    glColor3ub(61, 61, 92);
+    //building-12 box
+    glColor3ub(60 , 179, 113);
     glBegin(GL_QUADS);
-    glVertex3i(780,400,0);
-    glVertex3i(900,400,0);
-    glVertex3i(900,260,0);
-    glVertex3i(780,260,0);
+    glVertex3i(630,410,0);
+    glVertex3i(690,410,0);
+    glVertex3i(690,270,0);
+    glVertex3i(630,270,0);
     glEnd();
 
-    //building-12
-    glColor3ub(66, 102, 138);
+    //building-12 middle line
+    glColor3ub(117, 117, 163);
     glBegin(GL_QUADS);
-    glVertex3i(880,460,0);
-    glVertex3i(960,460,0);
-    glVertex3i(960,260,0);
-    glVertex3i(880,260,0);
+    glVertex3i(657.5,420,0);
+    glVertex3i(663.5,420,0);
+    glVertex3i(663.5,260,0);
+    glVertex3i(657.5,260,0);
     glEnd();
 
     //building-13
+    glColor3ub(61, 61, 92);
+    glBegin(GL_QUADS);
+    glVertex3i(780,400,0);
+    glVertex3i(870,400,0);
+    glVertex3i(870,260,0);
+    glVertex3i(780,260,0);
+    glEnd();
+
+    /* //building-13 box
+    glColor3ub(135, 206, 235);
+    glBegin(GL_QUADS);
+    glVertex3i(785,395,0);
+    glVertex3i(865,395,0);
+    glVertex3i(865,265,0);
+    glVertex3i(785,265,0);
+    glEnd();
+
+    //building-13 middle line
+    glColor3ub(61, 61, 92);
+    glBegin(GL_QUADS);
+    glVertex3i(822,400,0);
+    glVertex3i(828,400,0);
+    glVertex3i(828,260,0);
+    glVertex3i(822,260,0);
+    glEnd(); */
+
+    //building-14
+    glColor3ub(66, 102, 138);
+    glBegin(GL_QUADS);
+    glVertex3i(870,460,0);
+    glVertex3i(960,460,0);
+    glVertex3i(960,260,0);
+    glVertex3i(870,260,0);
+    glEnd();
+
+    //building-14 box
+    glColor3ub(30, 144, 255);
+    glBegin(GL_QUADS);
+    glVertex3i(875,455,0);
+    glVertex3i(955,455,0);
+    glVertex3i(955,265,0);
+    glVertex3i(875,265,0);
+    glEnd();
+
+    //building-14 middle line
+    glColor3ub(66, 102, 138);
+    glBegin(GL_QUADS);
+    glVertex3i(911,460,0);
+    glVertex3i(919,460,0);
+    glVertex3i(919,260,0);
+    glVertex3i(911,260,0);
+    glEnd();
+
+    //building-15
     glColor3ub(102, 115, 153);
     glBegin(GL_QUADS);
     glVertex3i(960,360,0);
@@ -348,7 +709,7 @@ void buildings()
     glEnd();
 
 
-    //building-14
+    //building-16
     glColor3ub(51, 77, 79);
     glBegin(GL_QUADS);
     glVertex3i(1070,400,0);
@@ -357,7 +718,7 @@ void buildings()
     glVertex3i(1070,260,0);
     glEnd();
 
-    //building-15
+    //building-17
     glColor3ub(61, 92, 99);
     glBegin(GL_QUADS);
     glVertex3i(1160,395,0);
@@ -366,7 +727,115 @@ void buildings()
     glVertex3i(1160,260,0);
     glEnd();
 
-    //building-16
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,270,0);
+    glVertex3i(1240,270,0);
+    glVertex3i(1240,265,0);
+    glVertex3i(1185,265,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,280,0);
+    glVertex3i(1240,280,0);
+    glVertex3i(1240,275,0);
+    glVertex3i(1185,275,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,290,0);
+    glVertex3i(1240,290,0);
+    glVertex3i(1240,285,0);
+    glVertex3i(1185,285,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,300,0);
+    glVertex3i(1240,300,0);
+    glVertex3i(1240,295,0);
+    glVertex3i(1185,295,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,310,0);
+    glVertex3i(1240,310,0);
+    glVertex3i(1240,305,0);
+    glVertex3i(1185,305,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,320,0);
+    glVertex3i(1240,320,0);
+    glVertex3i(1240,315,0);
+    glVertex3i(1185,315,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,330,0);
+    glVertex3i(1240,330,0);
+    glVertex3i(1240,325,0);
+    glVertex3i(1185,325,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,340,0);
+    glVertex3i(1240,340,0);
+    glVertex3i(1240,335,0);
+    glVertex3i(1185,335,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,350,0);
+    glVertex3i(1240,350,0);
+    glVertex3i(1240,345,0);
+    glVertex3i(1185,345,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,360,0);
+    glVertex3i(1240,360,0);
+    glVertex3i(1240,355,0);
+    glVertex3i(1185,355,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,370,0);
+    glVertex3i(1240,370,0);
+    glVertex3i(1240,365,0);
+    glVertex3i(1185,365,0);
+    glEnd();
+
+    //building-17 line
+    glColor3ub(105, 105, 105);
+    glBegin(GL_QUADS);
+    glVertex3i(1185,380,0);
+    glVertex3i(1240,380,0);
+    glVertex3i(1240,375,0);
+    glVertex3i(1185,375,0);
+    glEnd();
+
+    //building-18
     glColor3ub(71, 92, 102);
     glBegin(GL_QUADS);
     glVertex3i(1020,380,0);
@@ -375,7 +844,7 @@ void buildings()
     glVertex3i(1020,260,0);
     glEnd();
 
-    //building-17
+    //building-19
     glColor3ub(92, 138, 138);
     glBegin(GL_QUADS);
     glVertex3i(1240,405,0);
@@ -384,7 +853,7 @@ void buildings()
     glVertex3i(1240,260,0);
     glEnd();
 
-    //building-18
+    //building-20
     glColor3ub(82, 122, 122);
     glBegin(GL_QUADS);
     glVertex3i(1300,340,0);
@@ -392,7 +861,6 @@ void buildings()
     glVertex3i(1366,260,0);
     glVertex3i(1300,260,0);
     glEnd();
-
 }
 
 //dynamic lamp post function
@@ -445,23 +913,24 @@ void Light(int x,int y,int z)
 
 void otherCircle(GLfloat x, GLfloat y,GLfloat z, GLfloat radius,int r,int g,int b)
 {
-	int i;
-	int triangleAmount = 20; //# of triangles used to draw circle
+    int i;
+    int triangleAmount = 20; //# of triangles used to draw circle
 
-	//radius
-	GLfloat twicePi = 2.0f * 3.1416;
+    //radius
+    GLfloat twicePi = 2.0f * 3.1416;
     int counter=0;
     glColor3ub(r,g,b);
-	glBegin(GL_TRIANGLE_FAN);
-		glVertex3f(x, y, z); // center of circle
-		for(i = 0; i <= triangleAmount;i++) {
-			counter+=1;
-			glVertex3f(
-		            x + (radius * cos(i *  twicePi / triangleAmount)),
-			    y + (radius * sin(i * twicePi / triangleAmount)),z
-			);
-		}
-	glEnd();
+    glBegin(GL_TRIANGLE_FAN);
+    glVertex3f(x, y, z); // center of circle
+    for(i = 0; i <= triangleAmount; i++)
+    {
+        counter+=1;
+        glVertex3f(
+            x + (radius * cos(i *  twicePi / triangleAmount)),
+            y + (radius * sin(i * twicePi / triangleAmount)),z
+        );
+    }
+    glEnd();
 }
 
 void car() //red car
@@ -469,7 +938,7 @@ void car() //red car
     static float a=-400.0f;
     if(a>=1324)
     {
-         a=-400.0f;
+        a=-400.0f;
 
     }
     else
@@ -568,7 +1037,7 @@ void car2() //blue car
     static float a=-1100.0f;
     if(a>=1324)
     {
-         a=-1100.0f;
+        a=-1100.0f;
 
     }
     else
@@ -668,7 +1137,7 @@ void truck()
     static float a=650.0f;
     if(a<=-1300)
     {
-         a=550.0f;
+        a=550.0f;
 
     }
     else
@@ -823,8 +1292,8 @@ void plane()
     static float b=0.0f;
     if(a>=1324)
     {
-         a=-300.0f;
-         b=0.0f;
+        a=-300.0f;
+        b=0.0f;
 
     }
     else
@@ -900,7 +1369,7 @@ void clouds(float x,float y,float z,int m,int l,int n)
     static float a=-1300.0f;
     if(a>=1324)
     {
-         a=-1300.0f;
+        a=-1300.0f;
 
     }
     else
@@ -928,7 +1397,7 @@ void rainf()
     static float a=-760.0f;
     if(a<=-768)
     {
-         a=-760.0f;
+        a=-760.0f;
 
     }
     else
@@ -940,9 +1409,9 @@ void rainf()
     glPushMatrix();
     glTranslatef(0.0f,a,0.0f);
     glBegin(GL_LINES);
-    for(int i=500;i>=0;i--)
+    for(int i=500; i>=0; i--)
     {
-        for(int j=0;j<=i;j++)
+        for(int j=0; j<=i; j++)
         {
             glVertex3i(x,y,0);
             glVertex3i(x+3,y+10,0);
@@ -968,134 +1437,134 @@ void nightMode()
     int lamp=-350;
     int light=-350;
     //Full Body
-        Full(55,55,55);
-        //Road
-        Road();
-        //RoadLine
-        for(int i=55;i>0;i--)
-        {
-            roadlineX+=100;
-            RoadLine(roadlineX,55,0);
-        }
+    Full(55,55,55);
+    //Road
+    Road();
+    //RoadLine
+    for(int i=55; i>0; i--)
+    {
+        roadlineX+=100;
+        RoadLine(roadlineX,55,0);
+    }
 
-        //moon
-        otherCircle(300.0f,670.0f,0.0f,32.0f,255, 255, 153);
-        //cloud-1
-        clouds(-450.0f,670.0f,0.0f,170, 170, 120);
+    //moon
+    otherCircle(300.0f,670.0f,0.0f,32.0f,255, 255, 153);
+    //cloud-1
+    clouds(-450.0f,670.0f,0.0f,170, 170, 120);
 
-        //cloud0
-        clouds(-150.0f,630.0f,0.0f,170, 170, 120);
+    //cloud0
+    clouds(-150.0f,630.0f,0.0f,170, 170, 120);
 
-        //cloud1
-        clouds(150.0f,670.0f,0.0f,170, 170, 120);
-
-
-        if(planev)
-        {
-            plane();
-
-        }
-        //cloud2
-        clouds(450.0f,600.0f,0.0f,205, 205, 177);
-        //cloud3
-        clouds(750.0f,690.0f,0.0f,173, 173, 133);
-        //cloud4
-        clouds(1050.0f,680.0f,0.0f,173, 173, 133);
-
-        ground(42,55,17);
-
-        buildings();
+    //cloud1
+    clouds(150.0f,670.0f,0.0f,170, 170, 120);
 
 
-        //lamp post
-        for(int i=9;i>=0;i--)
-        {
-            lamp+=255;
-            lampPost(lamp,130,0);
-        }
-        //light
-        for(int i=9;i>=0;i--)
-        {
-            light+=255;
-            Light(light,130,0);
-        }
-        roadBorder();
-        glColor3ub(0,0,255);
-        if(carv)
-        {
-            truck();
-            car();
-            car2();
-        }
-        glPopMatrix();
+    if(planev)
+    {
+        plane();
 
-        if(rain)
-        {
+    }
+    //cloud2
+    clouds(450.0f,600.0f,0.0f,205, 205, 177);
+    //cloud3
+    clouds(750.0f,690.0f,0.0f,173, 173, 133);
+    //cloud4
+    clouds(1050.0f,680.0f,0.0f,173, 173, 133);
 
-            rainf();
+    ground(42,55,17);
 
-        }
+    buildings();
+
+
+    //lamp post
+    for(int i=9; i>=0; i--)
+    {
+        lamp+=255;
+        lampPost(lamp,130,0);
+    }
+    //light
+    for(int i=9; i>=0; i--)
+    {
+        light+=255;
+        Light(light,130,0);
+    }
+    roadBorder();
+    glColor3ub(0,0,255);
+    if(carv)
+    {
+        truck();
+        car();
+        car2();
+    }
+    glPopMatrix();
+
+    if(rain)
+    {
+
+        rainf();
+
+    }
 }
 
 void dayMode()
 {
-        int roadlineX=-300;
-        int treeXf=-350;
-        int treeXl=528;
-        int lamp=-350;
-        int light=-350;
+    int roadlineX=-300;
+    int treeXf=-350;
+    int treeXl=528;
+    int lamp=-350;
+    int light=-350;
 
-        Full(131,183,231);
-        //Road
-        Road();
-        //RoadLine
-        for(int i=55;i>0;i--)
-        {
-            roadlineX+=100;
-            RoadLine(roadlineX,55,0);
-        }
-        //cloud0
-        clouds(-100.0f,630.0f,0.0f,250,250,250);
-        //cloud1
-        clouds(150.0f,670.0f,0.0f,250,250,250);
-       if(planev)
-        {
-            plane();
-        }
-        //cloud2
-        clouds(450.0f,600.0f,0.0f,250,250,250);
-        //cloud3
-        clouds(750.0f,690.0f,0.0f,250,250,250);
-        //cloud4
-        clouds(1050.0f,710.0f,0.0f,250,250,250);
-        //Play Ground
-        ground(42,95,17);
+    Full(131,183,231);
+    //Road
+    Road();
+    //RoadLine
+    for(int i=55; i>0; i--)
+    {
+        roadlineX+=100;
+        RoadLine(roadlineX,55,0);
+    }
+    //cloud0
+    clouds(-100.0f,630.0f,0.0f,250,250,250);
+    //cloud1
+    clouds(150.0f,670.0f,0.0f,250,250,250);
+    if(planev)
+    {
+        plane();
+    }
+    //cloud2
+    clouds(450.0f,600.0f,0.0f,250,250,250);
+    //cloud3
+    clouds(750.0f,690.0f,0.0f,250,250,250);
+    //cloud4
+    clouds(1050.0f,710.0f,0.0f,250,250,250);
+    //Play Ground
+    ground(42,95,17);
 
-        buildings();
-
-
-        //lamp post
-        for(int i=9;i>=0;i--)
-        {
-            lamp+=255;
-            lampPost(lamp,130,0);
-        }
-        //light
-        roadBorder();
+    buildings();
 
 
-        if(carv)
-        {
-            truck();
-            car();
-            car2();
-        }
-        glPopMatrix();
+    //lamp post
+    for(int i=9; i>=0; i--)
+    {
+        lamp+=255;
+        lampPost(lamp,130,0);
+    }
+    //light
+    roadBorder();
 
-        if(rain)
-        {
-            rainf();
-        }
+
+    if(carv)
+    {
+        truck();
+        car();
+        car2();
+    }
+    glPopMatrix();
+
+    if(rain)
+    {
+        rainf();
+    }
 }
 
 
@@ -1155,7 +1624,7 @@ void display()
 
     if(day==2)
     {
-       nightMode();
+        nightMode();
     }
     else if(day==1)
     {
@@ -1186,99 +1655,99 @@ void myDisplay()
 void keyboard(unsigned char key, int x, int y)
 {
 //-------- spin --------
-if(key=='d')
-{
-    day=1;
-}
-else if(key=='n')
-{
-    day=2;
-}
+    if(key=='d')
+    {
+        day=1;
+    }
+    else if(key=='n')
+    {
+        day=2;
+    }
 
-else if(key=='r')
-{
-    rain=true;
-}
-else if(key=='e')
-{
-    rain=false;
-}
-else if(key=='c')
-{
-    carv=true;
-}
-else if(key=='p')
-{
-    planev=true;
-}
-else if(key==13)
-{
-    flag++;
-    myDisplay();
-}
-else if(key=='h')
-{
-    flag=0;
-    myDisplay();
-}
-else if(key==27)
-{
-    exit(0);
-}
+    else if(key=='r')
+    {
+        rain=true;
+    }
+    else if(key=='e')
+    {
+        rain=false;
+    }
+    else if(key=='c')
+    {
+        carv=true;
+    }
+    else if(key=='p')
+    {
+        planev=true;
+    }
+    else if(key==13)
+    {
+        flag++;
+        myDisplay();
+    }
+    else if(key=='h')
+    {
+        flag=0;
+        myDisplay();
+    }
+    else if(key==27)
+    {
+        exit(0);
+    }
 }
 
 
 void SpecialKeys(int key, int x, int y)
 {
     switch (key)
-	{
-		case GLUT_KEY_LEFT:
-            if(translate_x<200)
-            {
-                translate_x+=5;
-                glutPostRedisplay();
-            }
-			break;
-
-		case GLUT_KEY_RIGHT:
-            if(translate_x>-300)
-            {
-                translate_x-=5;
-                glutPostRedisplay();
-            }
-			break;
-
-        case GLUT_KEY_UP:
-            spin-=5;
-            if(spin>=360)
-            {
-                spin=0;
-            }
+    {
+    case GLUT_KEY_LEFT:
+        if(translate_x<200)
+        {
+            translate_x+=5;
             glutPostRedisplay();
-			break;
+        }
+        break;
 
-        case GLUT_KEY_DOWN:
-            spin+=5;
-            if(spin<=360)
-            {
-                spin=0;
-            }
+    case GLUT_KEY_RIGHT:
+        if(translate_x>-300)
+        {
+            translate_x-=5;
             glutPostRedisplay();
-			break;
-	}
+        }
+        break;
+
+    case GLUT_KEY_UP:
+        spin-=5;
+        if(spin>=360)
+        {
+            spin=0;
+        }
+        glutPostRedisplay();
+        break;
+
+    case GLUT_KEY_DOWN:
+        spin+=5;
+        if(spin<=360)
+        {
+            spin=0;
+        }
+        glutPostRedisplay();
+        break;
+    }
 }
 
 int main(int argc, char** argv)
 {
-glutInit(&argc, argv);
-glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-glutInitWindowSize (1366, 768);
-glutInitWindowPosition (0, 0);
-glutCreateWindow ("City Scape");
-myInit();
-glutDisplayFunc(myDisplay);
-glutKeyboardFunc(keyboard);
-glutSpecialFunc(SpecialKeys);
-glutMainLoop();
-return 0;
+    glutInit(&argc, argv);
+    glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
+    glutInitWindowSize (1366, 768);
+    glutInitWindowPosition (0, 0);
+    glutCreateWindow ("City Scape");
+    myInit();
+    glutDisplayFunc(myDisplay);
+    glutKeyboardFunc(keyboard);
+    glutSpecialFunc(SpecialKeys);
+    glutMainLoop();
+    return 0;
 }
