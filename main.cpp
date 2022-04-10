@@ -142,7 +142,7 @@ void ttprint(int x, int y,int z, char *string)
 };
 
 
-void playGround(int r,int g,int b)
+void ground(int r,int g,int b)
 {
     //Grass
     glColor3ub(r,g,b);
@@ -162,6 +162,147 @@ void playGround(int r,int g,int b)
     glVertex3i(-200,260,0);
 
 }
+
+void buildings()
+{
+    //building-1
+    glColor3ub(148, 184, 184);
+    glBegin(GL_QUADS);
+    glVertex3i(0,400,0);
+    glVertex3i(80,400,0);
+    glVertex3i(80,260,0);
+    glVertex3i(0,260,0);
+    glEnd();
+
+    //building-2
+    glColor3ub(82, 122, 122);
+    glBegin(GL_QUADS);
+    glVertex3i(80,340,0);
+    glVertex3i(110,340,0);
+    glVertex3i(110,260,0);
+    glVertex3i(80,260,0);
+    glEnd();
+
+    //building-3
+    glColor3ub(51, 77, 77);
+    glBegin(GL_QUADS);
+    glVertex3i(110,360,0);
+    glVertex3i(160,360,0);
+    glVertex3i(160,260,0);
+    glVertex3i(110,260,0);
+    glEnd();
+
+    //building-4
+    glColor3ub(96, 159, 159);
+    glBegin(GL_QUADS);
+    glVertex3i(160,420,0);
+    glVertex3i(210,420,0);
+    glVertex3i(210,260,0);
+    glVertex3i(160,260,0);
+    glEnd();
+
+    //building-5
+    glColor3ub(102, 153, 153);
+    glBegin(GL_QUADS);
+    glVertex3i(210,390,0);
+    glVertex3i(250,390,0);
+    glVertex3i(250,260,0);
+    glVertex3i(210,260,0);
+    glEnd();
+
+    //tower--mid
+    glColor3ub(41, 61, 61);
+    glBegin(GL_QUADS);
+    glVertex3i(258,610,0);
+    glVertex3i(272,610,0);
+    glVertex3i(272,260,0);
+    glVertex3i(258,260,0);
+    glEnd();
+
+
+    //tower-midtop-1
+    glColor3ub(41, 61, 61);
+    glBegin(GL_QUADS);
+    glVertex3i(245,580,0);
+    glVertex3i(285,580,0);
+    glVertex3i(285,560,0);
+    glVertex3i(245,560,0);
+    glEnd();
+
+    //tower-midtop-2
+    glColor3ub(41, 61, 61);
+    glBegin(GL_QUADS);
+    glVertex3i(240,605,0);
+    glVertex3i(288,605,0);
+    glVertex3i(288,585,0);
+    glVertex3i(240,585,0);
+    glEnd();
+
+    //tower
+    glColor3ub(41, 61, 61);
+    glBegin(GL_QUADS);
+    glVertex3i(250,550,0);
+    glVertex3i(280,550,0);
+    glVertex3i(280,260,0);
+    glVertex3i(250,260,0);
+    glEnd();
+
+    //building-5
+    glColor3ub(102, 153, 153);
+    glBegin(GL_QUADS);
+    glVertex3i(275,410,0);
+    glVertex3i(325,410,0);
+    glVertex3i(325,260,0);
+    glVertex3i(275,260,0);
+    glEnd();
+
+    //building-6
+    glColor3ub(163, 194, 194);
+    glBegin(GL_QUADS);
+    glVertex3i(140,310,0);
+    glVertex3i(300,310,0);
+    glVertex3i(300,260,0);
+    glVertex3i(140,260,0);
+    glEnd();
+
+    //building-7
+    glColor3ub(163, 194, 194);
+    glBegin(GL_QUADS);
+    glVertex3i(325,310,0);
+    glVertex3i(365,310,0);
+    glVertex3i(365,260,0);
+    glVertex3i(325,260,0);
+    glEnd();
+
+    //building-8
+    glColor3ub(71, 107, 107);
+    glBegin(GL_QUADS);
+    glVertex3i(365,330,0);
+    glVertex3i(385,330,0);
+    glVertex3i(385,260,0);
+    glVertex3i(365,260,0);
+    glEnd();
+
+    //building-
+    glColor3ub(71, 107, 107);
+    glBegin(GL_QUADS);
+    glVertex3i(395,370,0);
+    glVertex3i(615,370,0);
+    glVertex3i(615,260,0);
+    glVertex3i(395,260,0);
+    glEnd();
+
+    glColor3ub(82, 122, 122);
+    glBegin(GL_QUADS);
+    glVertex3i(385,360,0);
+    glVertex3i(625,360,0);
+    glVertex3i(625,260,0);
+    glVertex3i(385,260,0);
+    glEnd();
+
+
+}
+
 //dynamic lamp post function
 void lampPost(int x,int y,int z)
 {
@@ -769,7 +910,9 @@ void nightMode()
         //cloud4
         clouds(1050.0f,680.0f,0.0f,173, 173, 133);
 
-        playGround(42,55,17);
+        ground(42,55,17);
+
+        buildings();
 
 
         //lamp post
@@ -834,7 +977,9 @@ void dayMode()
         //cloud4
         clouds(1050.0f,710.0f,0.0f,250,250,250);
         //Play Ground
-        playGround(42,95,17);
+        ground(42,95,17);
+
+        buildings();
 
 
         //lamp post
