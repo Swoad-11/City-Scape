@@ -283,7 +283,7 @@ void buildings()
     glVertex3i(365,260,0);
     glEnd();
 
-    //building-
+    //building-9
     glColor3ub(71, 107, 107);
     glBegin(GL_QUADS);
     glVertex3i(395,370,0);
@@ -300,6 +300,98 @@ void buildings()
     glVertex3i(385,260,0);
     glEnd();
 
+    //building-11
+    glColor3ub(133, 133, 173);
+    glBegin(GL_QUADS);
+    glVertex3i(690,430,0);
+    glVertex3i(780,430,0);
+    glVertex3i(780,260,0);
+    glVertex3i(690,260,0);
+    glEnd();
+
+    //building-10
+    glColor3ub(117, 117, 163);
+    glBegin(GL_QUADS);
+    glVertex3i(625,420,0);
+    glVertex3i(695,420,0);
+    glVertex3i(695,260,0);
+    glVertex3i(625,260,0);
+    glEnd();
+
+
+
+    //building-12
+    glColor3ub(61, 61, 92);
+    glBegin(GL_QUADS);
+    glVertex3i(780,400,0);
+    glVertex3i(900,400,0);
+    glVertex3i(900,260,0);
+    glVertex3i(780,260,0);
+    glEnd();
+
+    //building-12
+    glColor3ub(66, 102, 138);
+    glBegin(GL_QUADS);
+    glVertex3i(880,460,0);
+    glVertex3i(960,460,0);
+    glVertex3i(960,260,0);
+    glVertex3i(880,260,0);
+    glEnd();
+
+    //building-13
+    glColor3ub(102, 115, 153);
+    glBegin(GL_QUADS);
+    glVertex3i(960,360,0);
+    glVertex3i(1020,360,0);
+    glVertex3i(1020,260,0);
+    glVertex3i(960,260,0);
+    glEnd();
+
+
+    //building-14
+    glColor3ub(51, 77, 79);
+    glBegin(GL_QUADS);
+    glVertex3i(1070,400,0);
+    glVertex3i(1180,400,0);
+    glVertex3i(1180,260,0);
+    glVertex3i(1070,260,0);
+    glEnd();
+
+    //building-15
+    glColor3ub(61, 92, 99);
+    glBegin(GL_QUADS);
+    glVertex3i(1160,395,0);
+    glVertex3i(1240,395,0);
+    glVertex3i(1240,260,0);
+    glVertex3i(1160,260,0);
+    glEnd();
+
+    //building-16
+    glColor3ub(71, 92, 102);
+    glBegin(GL_QUADS);
+    glVertex3i(1020,380,0);
+    glVertex3i(1080,380,0);
+    glVertex3i(1080,260,0);
+    glVertex3i(1020,260,0);
+    glEnd();
+
+    //building-17
+    glColor3ub(92, 138, 138);
+    glBegin(GL_QUADS);
+    glVertex3i(1240,405,0);
+    glVertex3i(1300,405,0);
+    glVertex3i(1300,260,0);
+    glVertex3i(1240,260,0);
+    glEnd();
+
+    //building-18
+    glColor3ub(82, 122, 122);
+    glBegin(GL_QUADS);
+    glVertex3i(1300,340,0);
+    glVertex3i(1366,340,0);
+    glVertex3i(1366,260,0);
+    glVertex3i(1300,260,0);
+    glEnd();
 
 }
 
