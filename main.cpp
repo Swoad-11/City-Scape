@@ -163,6 +163,17 @@ void ground(int r,int g,int b)
 
 }
 
+void towerLight(int r,int g,int b){
+    //tower-light
+    glColor3ub(r,g,b);
+    glBegin(GL_QUADS);
+    glVertex3i(250,610,0);
+    glVertex3i(278,610,0);
+    glVertex3i(278,585,0);
+    glVertex3i(250,585,0);
+    glEnd();
+}
+
 void buildings()
 {
     //building-1
@@ -274,6 +285,7 @@ void buildings()
     glVertex3i(240,585,0);
     glEnd();
 
+
     //tower
     glColor3ub(41, 61, 61);
     glBegin(GL_QUADS);
@@ -311,7 +323,7 @@ void buildings()
     glEnd();
 
     //building-6 lineleft
-    glColor3ub(32, 178, 170);
+    glColor3ub(93, 109, 126);
     glBegin(GL_QUADS);
     glVertex3i(140,310,0);
     glVertex3i(143,310,0);
@@ -320,7 +332,7 @@ void buildings()
     glEnd();
 
     //building-6 linetop
-    glColor3ub(32, 178, 170);
+    glColor3ub(93, 109, 126);
     glBegin(GL_QUADS);
     glVertex3i(140,310,0);
     glVertex3i(300,310,0);
@@ -329,7 +341,7 @@ void buildings()
     glEnd();
 
     //building-6 lineright
-    glColor3ub(32, 178, 170);
+    glColor3ub(93, 109, 126);
     glBegin(GL_QUADS);
     glVertex3i(297,310,0);
     glVertex3i(300,310,0);
@@ -338,7 +350,7 @@ void buildings()
     glEnd();
 
     //building-6 linecenter
-    glColor3ub(32, 178, 170);
+    glColor3ub(93, 109, 126);
     glBegin(GL_QUADS);
     glVertex3i(185,310,0);
     glVertex3i(188,310,0);
@@ -457,7 +469,7 @@ void buildings()
     glEnd();
 
     //building-11
-    glColor3ub(133, 133, 173);
+    glColor3ub(51, 77, 79);
     glBegin(GL_QUADS);
     glVertex3i(690,430,0);
     glVertex3i(780,430,0);
@@ -466,7 +478,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,265,0);
     glVertex3i(770,265,0);
@@ -475,7 +487,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,275,0);
     glVertex3i(770,275,0);
@@ -484,7 +496,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,285,0);
     glVertex3i(770,285,0);
@@ -493,7 +505,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,295,0);
     glVertex3i(770,295,0);
@@ -502,7 +514,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,305,0);
     glVertex3i(770,305,0);
@@ -511,7 +523,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,315,0);
     glVertex3i(770,315,0);
@@ -520,7 +532,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,325,0);
     glVertex3i(770,325,0);
@@ -529,7 +541,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,335,0);
     glVertex3i(770,335,0);
@@ -538,7 +550,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,345,0);
     glVertex3i(770,345,0);
@@ -547,7 +559,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,355,0);
     glVertex3i(770,355,0);
@@ -556,7 +568,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,365,0);
     glVertex3i(770,365,0);
@@ -565,7 +577,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,375,0);
     glVertex3i(770,375,0);
@@ -574,7 +586,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,385,0);
     glVertex3i(770,385,0);
@@ -583,7 +595,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,395,0);
     glVertex3i(770,395,0);
@@ -592,7 +604,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,405,0);
     glVertex3i(770,405,0);
@@ -601,7 +613,7 @@ void buildings()
     glEnd();
 
     //building-11 lines
-    glColor3ub(25, 25, 112);
+    glColor3ub(167, 201, 245);
     glBegin(GL_QUADS);
     glVertex3i(700,415,0);
     glVertex3i(770,415,0);
@@ -610,12 +622,12 @@ void buildings()
     glEnd();
 
     //buidling-11 middle line
-    glColor3ub(133, 133, 173);
+    glColor3ub(51, 77, 79);
     glBegin(GL_QUADS);
-    glVertex3i(729,430,0);
-    glVertex3i(741,430,0);
-    glVertex3i(741,260,0);
-    glVertex3i(729,260,0);
+    glVertex3i(731,430,0);
+    glVertex3i(739,430,0);
+    glVertex3i(739,260,0);
+    glVertex3i(731,260,0);
     glEnd();
 
     //building-12
@@ -628,7 +640,7 @@ void buildings()
     glEnd();
 
     //building-12 box
-    glColor3ub(60 , 179, 113);
+    glColor3ub(193, 173, 255 );
     glBegin(GL_QUADS);
     glVertex3i(630,410,0);
     glVertex3i(690,410,0);
@@ -646,7 +658,7 @@ void buildings()
     glEnd();
 
     //building-13
-    glColor3ub(61, 61, 92);
+    glColor3ub(128, 139, 150);
     glBegin(GL_QUADS);
     glVertex3i(780,400,0);
     glVertex3i(870,400,0);
@@ -654,8 +666,8 @@ void buildings()
     glVertex3i(780,260,0);
     glEnd();
 
-    /* //building-13 box
-    glColor3ub(135, 206, 235);
+     //building-13 box
+    glColor3ub(171, 178, 185 );
     glBegin(GL_QUADS);
     glVertex3i(785,395,0);
     glVertex3i(865,395,0);
@@ -664,16 +676,16 @@ void buildings()
     glEnd();
 
     //building-13 middle line
-    glColor3ub(61, 61, 92);
+    glColor3ub(128, 139, 150);
     glBegin(GL_QUADS);
     glVertex3i(822,400,0);
     glVertex3i(828,400,0);
     glVertex3i(828,260,0);
     glVertex3i(822,260,0);
-    glEnd(); */
+    glEnd();
 
     //building-14
-    glColor3ub(66, 102, 138);
+    glColor3ub(93, 109, 126);
     glBegin(GL_QUADS);
     glVertex3i(870,460,0);
     glVertex3i(960,460,0);
@@ -682,7 +694,7 @@ void buildings()
     glEnd();
 
     //building-14 box
-    glColor3ub(30, 144, 255);
+    glColor3ub(133, 146, 158);
     glBegin(GL_QUADS);
     glVertex3i(875,455,0);
     glVertex3i(955,455,0);
@@ -691,7 +703,7 @@ void buildings()
     glEnd();
 
     //building-14 middle line
-    glColor3ub(66, 102, 138);
+    glColor3ub(93, 109, 126);
     glBegin(GL_QUADS);
     glVertex3i(911,460,0);
     glVertex3i(919,460,0);
@@ -1473,6 +1485,8 @@ void nightMode()
 
     ground(42,55,17);
 
+    towerLight(255, 19, 0);
+
     buildings();
 
 
@@ -1539,6 +1553,8 @@ void dayMode()
     clouds(1050.0f,710.0f,0.0f,250,250,250);
     //Play Ground
     ground(42,95,17);
+
+    towerLight(197, 221, 253);
 
     buildings();
 
