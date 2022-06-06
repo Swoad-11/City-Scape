@@ -1,6 +1,6 @@
 # City-Scape
 This is an OpenGL Project of a city. 
-It's a 2D scenary. Here we have added night view,day view features also used transformations for movements of objects.
+It's a 2D scenary. Here we have added night view,day view features also used transformations for movements of objects. <br>
 Home:
 ![Home](https://user-images.githubusercontent.com/68291728/172234346-a17f3abf-2f3b-42ab-a28e-5bb160711707.png)
 Day view:
